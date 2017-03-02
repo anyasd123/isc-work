@@ -71,3 +71,47 @@ np.transpose(arr)
 np.ravel(arr)
 print arr.astype (np.float64)
 #often have two ways of doing things with numpy (e.g. see above with min/max)
+
+#np.histogram
+
+#Array calculations and operations exercises
+
+#Exercise 1
+a = np.array([range(4), range(10, 14)])
+b = np.array([2, -1, 1, 0])
+print a * b
+b1 = b * 100
+b2 = b*100.0
+print b2
+print b1==b2
+print b1.dtype b2.dtype
+
+#Exercise 2
+arr = np.arange(10)
+#arange is the same as range function but creates an array instead of a list
+print arr < 3
+print np.less(arr, 3)
+condition = np.logical_or(arr < 3 or arr > 8)
+new_arr = np.where(condition, arr * 5, arr * -5)
+
+#Exercise 3
+def calcMagnitude (u, v, minmag = 0.1:
+    mag = ((u**2) + (v**2))**0.5
+    output = np.where(mag>minmag, mag, minmag)
+return output
+
+u = np.array([[[4, 5, 6], [2, 3, 4]])
+v = np.array([[[2, 2, 2], [1, 1, 1]])
+print calcMagnitude (u, v)
+
+#Working with missing values exercises
+
+#Exercise 1
+import numpy.ma as MA
+MARR = MA.masked_array(range (10), fill_value =-999)
+print MARR, MARR.fill_value
+MARR[2] = MA.masked
+print MARR
+print MARR.mask
+
+#need to finish from g. 
