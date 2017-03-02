@@ -40,3 +40,34 @@ print a[1:, 2]
 
 #See batch job example in parallel processing ppt for CMIP5 and NetCDF. Import cf
 
+n.shape(a)
+n.rank(a)
+np.size(a)
+
+a.dtype.char #typecode of array
+np.reshape(a, (2,3)) #reshape array
+np.transpose(a) #transpose array (flipping dimensions) e.g. see exercise 2
+np.ravel(a) #flatten a multi dimensional array to a 1D array
+np.concatenate(a,b) #sticks one array onto end of another, can specify dimension
+np.repeat(a,3) #repeat array elements
+b = a.astype
+
+#meshgrid 
+#linspace means equally spaced points
+
+
+#Exercises on interrogating and manipulating arrays
+
+#Exercise 1
+arr = np.array([range(4), range(10, 14)])
+print arr.shape
+print arr.size
+print arr.max() #or np.max(arr)
+print arr.min() #or np.min(arr)
+
+#Exercise 2
+np.reshape(arr, (2, 2, 2))
+np.transpose(arr)
+np.ravel(arr)
+print arr.astype (np.float64)
+#often have two ways of doing things with numpy (e.g. see above with min/max)
