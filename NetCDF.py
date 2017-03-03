@@ -21,3 +21,17 @@ times = dataset.createVariable('time', np.float64, ('time',))etc #time could be 
 #ETC
 
 dataset.description
+
+#Look at NETCDF contents with ncdump
+#Can view ncview to see data as graph e.g.
+ncview sensor_data.nc
+
+#For a nicer plot use matplotlib
+from netCDF import Dataset
+import numpy as np
+
+dataFile = 'lalala.nc'
+
+#See PPT for more info 
+
+#Can also plot netcdf data with CIS
